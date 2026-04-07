@@ -1,4 +1,5 @@
 Parabola Artillery 🚀🎯
+
 An interactive, competitive educational game designed to help students discover and master quadratic graph transformations (y = ax^2 + bx + c). Built with React and HTML5 Canvas.
 
 📖 About the Game
