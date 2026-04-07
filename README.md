@@ -4,9 +4,11 @@ An interactive, competitive educational game designed to help students discover 
 
 Built with React and HTML5 Canvas.
 
+
 📖 About the Game
 
 Two players take turns adjusting the coefficients of a quadratic equation to fire projectiles over a dynamically generated mountain to hit their opponent. By tweaking the values in real-time, students build an intuitive understanding of how a, b, and c affect the shape and position of a parabola.
+
 
 ✨ Features
 
@@ -25,6 +27,7 @@ o	Green ($): Controls the height (visually represented as the cannon's elevation
 •	Pressure Timer: A 60-second timer activates from Round 2 onwards to keep the classroom energy high!
 
 •	Satisfying Physics: Smooth 60fps canvas animations with shockwaves, screen-shake impacts, and fading debris.
+
 
 🛠️ Technologies Used
 
@@ -52,6 +55,7 @@ o	c: Raise or lower your starting firing height.
 3.	Once your glowing trajectory line is aimed at the opponent, click FIRE!
 
 4.	Deplete the opponent's health to 0 to win the Math Battle!
+
 
 💻 Local Installation
 
