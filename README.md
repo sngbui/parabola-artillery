@@ -26,6 +26,7 @@ o	b: Shift the arc left or right.
 o	c: Raise or lower your starting firing height.
 3.	Once your glowing trajectory line is aimed at the opponent, click FIRE!
 4.	Deplete the opponent's health to 0 to win the Math Battle!
+
 💻 Local Installation
 If you want to run this project locally on your machine:
 1.	Clone the repository ```bash git clone https://www.google.com/search?q=https://github.com/yourusername/parabola-artillery.git ```
