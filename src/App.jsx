@@ -490,7 +490,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-slate-950 text-white font-sans flex flex-col items-center justify-center p-4">
-      
+      <h1>HELLO WORLD - THE ENGINE IS RUNNING</h1>
       {/* HEADER */}
       <div className="w-full max-w-4xl text-center mb-4">
         <h1 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-red-400 drop-shadow-md">Parabola Artillery</h1>
