@@ -1,6 +1,8 @@
 Parabola Artillery 🚀🎯
 
-An interactive, competitive educational game designed to help students discover and master quadratic graph transformations (y = ax^2 + bx + c). Built with React and HTML5 Canvas.
+An interactive, competitive educational game designed to help students discover and master quadratic graph transformations (y = ax^2 + bx + c). 
+
+Built with React and HTML5 Canvas.
 
 📖 About the Game
 Two players take turns adjusting the coefficients of a quadratic equation to fire projectiles over a dynamically generated mountain to hit their opponent. By tweaking the values in real-time, students build an intuitive understanding of how a, b, and c affect the shape and position of a parabola.
