@@ -174,23 +174,33 @@ export default function App() {
       ctx.lineWidth = 4;
       ctx.shadowColor = turn === 1 ? '#3b82f6' : '#ef4444';
       ctx.shadowBlur = 10;
+	
       
       // --- NEW CODE ---
 // We define a range that goes from -20 to 20 relative to the player
 const startX = -20; 
 const endX = 20;
 const step = 0.2;
+let isDrawing = false; // This tracks if the "pen" is currently down
 
 for (let localX = startX; localX <= endX; localX += step) {
   const localY = a * localX * localX + b * localX + c;
   const worldX = activeOriginX + localX;
-  
   const pos = toScreen(worldX, localY);
   
-  // We only draw if the point is above the ground (-2 on our grid)
-  if (localY > -2) {
-    if (localX === startX) ctx.moveTo(pos.sx, pos.sy);
-    else ctx.lineTo(pos.sx, pos.sy);
+  // Only draw if the point is within our vertical grid (-2 to 10)
+  if (localY >= -2 && localY <= 10) {
+    if (!isDrawing) {
+      // If we weren't drawing before, move the pen to this spot without a line
+      ctx.moveTo(pos.sx, pos.sy);
+      isDrawing = true;
+    } else {
+      // If we are already drawing, continue the line
+      ctx.lineTo(pos.sx, pos.sy);
+    }
+  } else {
+    // If the point is out of bounds, "lift the pen"
+    isDrawing = false;
   }
 }
       ctx.stroke();
