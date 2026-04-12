@@ -175,18 +175,24 @@ export default function App() {
       ctx.shadowColor = turn === 1 ? '#3b82f6' : '#ef4444';
       ctx.shadowBlur = 10;
       
-      const endLocalX = turn === 1 ? 20 : -20;
-      const step = turn === 1 ? 0.2 : -0.2;
+      // --- NEW CODE ---
+// We define a range that goes from -20 to 20 relative to the player
+const startX = -20; 
+const endX = 20;
+const step = 0.2;
 
-      for (let localX = 0; Math.abs(localX) <= Math.abs(endLocalX); localX += step) {
-        // Equation relative to the active player's local x
-        const localY = a * localX * localX + b * localX + c;
-        const worldX = activeOriginX + localX;
-        
-        const pos = toScreen(worldX, localY);
-        if (localX === 0) ctx.moveTo(pos.sx, pos.sy);
-        else ctx.lineTo(pos.sx, pos.sy);
-      }
+for (let localX = startX; localX <= endX; localX += step) {
+  const localY = a * localX * localX + b * localX + c;
+  const worldX = activeOriginX + localX;
+  
+  const pos = toScreen(worldX, localY);
+  
+  // We only draw if the point is above the ground (-2 on our grid)
+  if (localY > -2) {
+    if (localX === startX) ctx.moveTo(pos.sx, pos.sy);
+    else ctx.lineTo(pos.sx, pos.sy);
+  }
+}
       ctx.stroke();
       ctx.restore();
     }
